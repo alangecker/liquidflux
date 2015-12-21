@@ -18,6 +18,8 @@ early alpha stage
 # Features
 3 Collections, sharing more of the code
 
+![chart](https://raw.github.com/alangecker/liquidflux/master/chart.svg)
+
 #### Flux Frontend
   - mixin for React
     - listens on Store changes
