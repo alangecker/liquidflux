@@ -1,0 +1,22 @@
+{
+  "name": "liquidFlux",
+  "version": "0.0.1",
+  "description": "perhaps something big, we'll see what happens in the future",
+  "keywords": [],
+  "author": {
+    "name": "Andreas Langecker",
+    "email": "a.langecker@posteo.de"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.10.0",
+    "http": "0.0.0",
+    "i40": "^1.3.1",
+    "object-assign": "^4.0.1",
+    "redis": "^2.4.2",
+    "socket.io": "^1.3.7"
+  }
+}
