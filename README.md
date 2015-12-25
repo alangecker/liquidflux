@@ -16,7 +16,7 @@ early alpha stage
 
 
 # Features
-3 Collections, sharing more of the code
+3 Collections, sharing most of the code
 
 ![chart](https://raw.githubusercontent.com/alangecker/liquidflux/master/chart.png)
 
