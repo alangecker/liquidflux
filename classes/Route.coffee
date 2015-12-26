@@ -34,7 +34,6 @@ class Route
   updateHandler: (index) ->
     return () ->
       condition = @listener[index][2]
-      console.log 'update', @updatePaths
       for path,params of @updatePaths
         @content params, (body) =>
           @sendUpdate({cacheable:@cacheable}, {type:@type, path:path}, body)

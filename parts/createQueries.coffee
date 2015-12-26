@@ -5,7 +5,7 @@ Logger = require('../Logger')('createQueries')
 Dispatcher  = require './Dispatcher'
 
 
-runningManager = document.runningManager =
+runningManager =
   queries: {}
   isRunning: (pod,name,args) ->
     key = "#{pod}::#{name}"

@@ -18,7 +18,10 @@ module.exports =
     @refreshFluxStates(null, nextProps)
 
   getInitialState: ->
-    return @getFluxStates(@props) if @getFluxStates
+    if @getFluxStates
+      return @getFluxStates(@props)
+    else
+      return {}
 
   refreshFluxStates: (p, props) ->
     props = if props then props else @props

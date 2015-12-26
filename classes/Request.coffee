@@ -38,7 +38,7 @@ class Request
     options.listen = true if @listen
     return options
 
-  success: (body) ->
+  success: (body) =>
     Logger.log "successful: #{@type} #{@path}"
 
     header =

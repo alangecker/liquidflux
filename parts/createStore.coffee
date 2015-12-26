@@ -24,8 +24,9 @@ module.exports = (obj) ->
 
   Store.fetch = (options) ->
     value = options.locally.bind(Store)()
-    if value == undefined
+    if value == undefined && options.loaded != true
       options.remotely.bind(Store)()
+      options.loaded = true
       return options.default
     else
       return value

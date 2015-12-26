@@ -44,6 +44,4 @@ module.exports =
     res = options
     res.header = header
     res.body = bodyHelpers.compose(body)
-    console.log 'updateHandler'
     @redisResponse.publish 'update', JSON.stringify res
-    console.log 'updateHandler2'
