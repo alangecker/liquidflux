@@ -64,10 +64,23 @@ class Route
     next()
 
   processAction: (request) ->
-    @action(request) if @action
-    @processContent(request)
+    if @action
+      action = @action(request)
+      if action instanceof Promise
+        action.then (payload) =>
+          if @content
+            @processContent(request, payload)
+          else
+            request.success()
+        , (err) ->
+          request.error(err)
 
-  processContent: (request) ->
-    @content request.params, request.success.bind(request) if @content
+      else if @content
+        @processContent(request)
+    else if @content
+      @processContent(request)
+
+  processContent: (request, dispatcherResponse) ->
+    @content request.params, request.success.bind(request), dispatcherResponse
 
 module.exports = Route

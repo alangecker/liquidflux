@@ -32,11 +32,12 @@ module.exports = (obj) ->
       return value
 
 
-  Store.emitChange = (key='CHANGE') ->
-    LoggerStore.log "#{Store.pod} -> #{key}"
-    Store.emit key
+  Store.emitChange = (args...) ->
+    args[0] = 'CHANGE' if not args[0]
+    LoggerStore.log "#{Store.pod} -> #{args[0]}"
+    Store.emit args...
 
-  keyWords = ['get', 'update', 'set', 'do']
+  keyWords = ['get', 'update', 'set', 'do', 'is']
   for keyWord in keyWords
     if Store[keyWord]
       for key,func of Store[keyWord]
