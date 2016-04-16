@@ -50,6 +50,9 @@ class API
   post: (path, body, onUpdate) ->
     @send('POST', path, body, onUpdate)
 
+  delete: (path, body, onUpdate) ->
+    @send('DELETE', path, body, onUpdate)
+
   update: (path, body, onUpdate) ->
     @send('UPDATE', path, body, onUpdate)
 
